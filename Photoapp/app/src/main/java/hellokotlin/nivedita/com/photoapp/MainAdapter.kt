@@ -48,14 +48,14 @@ class MainAdapter(var photos: List<Photo>,
     }
 
     override fun onBindViewHolder(holder: PhotoViewHolder?, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
         val photo = photos[position]
         holder?.tags?.text = photo.tags
         holder?.likes?.text = photo.likes.toString()
         holder?.favourites?.text = photo.favourites.toString()
-        if (photo.previewUrl.isNotEmpty()) {
+        if (photo.previewURL.isNotEmpty()) {
             Glide.with(holder?.tags?.context)
-                    .load(photo.previewUrl)
+                    .load(photo.previewURL)
                     .into(holder?.photoItem)
         }
 

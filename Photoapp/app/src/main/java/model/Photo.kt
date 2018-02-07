@@ -9,6 +9,6 @@ data class Photo(val id: String,
                  val likes: Int,
                  val favourites:Int,
                  val tags: String,
-                 val previewUrl: String,
-                 val webformatUrl: String) : Serializable {
+                 val previewURL: String,
+                 val webformatURL: String) : Serializable {
 }
